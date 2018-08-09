@@ -1,0 +1,8 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ybd:ybd@eureka-cluster1:8761/eureka/,http://ybd:ybd@eureka-cluster2:8762/eureka/,http://ybd:ybd@eureka-cluster3:8763/eureka/
+  instance:
+    metadata-map:
+      user.name: ybd
+      user.password: ybd

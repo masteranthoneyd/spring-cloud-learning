@@ -1,0 +1,20 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: service-b
+  profiles:
+    active: dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true

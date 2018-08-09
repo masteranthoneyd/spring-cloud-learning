@@ -1,0 +1,19 @@
+server:
+  port: 6010
+spring:
+  application:
+    name: admin
+  profiles:
+    active: dev
+  security:
+    user:
+      name: ybd
+      password: ybd
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: eureka-cluster
+  profiles:
+    active: single
+  security:
+    user:
+      name: ybd
+      password: ybd
+eureka:
+  environment: prod
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    ip-address: ${eureka.instance.hostname}
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+

@@ -1,0 +1,19 @@
+server:
+  port: 8761
+eureka:
+  environment: dev
+  instance:
+    hostname: localhost
+    prefer-ip-address: false
+    metadata-map:
+      user.name: ybd
+      user.password: ybd
+  client:
+    fetch-registry: false
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://ybd:ybd@${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 15000
+

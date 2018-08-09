@@ -1,0 +1,14 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: eureka-cluster1
+    metadata-map:
+      user.name: ybd
+      user.password: ybd
+  client:
+    service-url:
+      defaultZone: http://ybd:ybd@eureka-cluster2:8762/eureka/,http://ybd:ybd@eureka-cluster3:8763/eureka/
+  server:
+    enable-self-preservation: false
+
